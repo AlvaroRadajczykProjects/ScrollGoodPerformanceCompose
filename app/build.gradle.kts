@@ -27,6 +27,7 @@ android {
             isShrinkResources = true
             isDebuggable = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("debug")
         }
 
         getByName("debug") {
@@ -34,6 +35,17 @@ android {
             isDebuggable = true
         }
     }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("demo") {
+
+        }
+        create("full") {
+
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

@@ -39,7 +39,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(list: List<WellnessTask> = remember { getWellnessTasks() }) {
+fun Greeting(
+    list: List<WellnessTask> = remember { getWellnessTasks() }
+) {
     LazyColumn (
         modifier = Modifier
     ) {
